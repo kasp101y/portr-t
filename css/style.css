@@ -11,6 +11,20 @@ video {
   object-fit: cover;
 }
 
+#youtube {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
 /*====HEADER====*/
 
 header {
@@ -22,7 +36,31 @@ header {
   background-position: center;
 }
 
+header h1 {
+  position: relative;
+  top: 5vw;
+  left: 5vw;
+  font-family: "Rubik Mono One", sans-serif;
+  color: yellow;
+}
+header p {
+  position: relative;
+  top: 5vw;
+  left: 5vw;
+  font-family: "Quicksand", sans-serif;
+  color: yellow;
+}
+}
+
 /*====MAIN====*/
+
+h2 {
+    font-family: "Rubik Mono One", sans-serif;
+}
+
+main p {
+  font-family: "Quicksand", sans-serif;
+}
 
 .section_1 {
   padding-top: 6vw;
@@ -125,6 +163,41 @@ article {
 /*===MEDIA===*/
 
 @media (min-width: 1000px) {
+  header h1 {
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 8em;
+  }
+  header p {
+    position: relative;
+    top: 4vw;
+    left: 5.5vw;
+    font-family: "Quicksand", sans-serif;
+    font-size: 2em;
+  }
+
+  main h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4rem;
+  }
+
+  main p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5em;
+  }
+
+  .section_1 article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    align-items: center;
+  }
+  .section_1 article p {
+    font-size: 1em;
+  }
+
   .section_3 article {
     padding: 10vw;
     display: grid;
@@ -132,5 +205,9 @@ article {
     grid-template-rows: repeat(9, 1fr);
     gap: 10px;
     height: 30vw;
+  }
+
+  .section_3 h2 {
+    font-size: 6rem;
   }
 }
